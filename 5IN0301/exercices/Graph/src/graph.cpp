@@ -2,6 +2,7 @@
 #include "graph.h"
 # include <iostream>
 #include <cstddef>
+#include <vector>
 using namespace std;
 //---------------------------------------------------------------------------
 class TWork {
@@ -14,17 +15,16 @@ private:
 	// TODO
 	
 	
-	const TGraph graph;
+	TGraph graph;
 	double bestLength = 0;
 	int begin;
 	int end;
 	TPath path;
 	double* lenght;
-	TPath tmpPath;
-	double tmpLenght;
+	//TPath tmpPath;
+	//double tmpLenght;
 	void DoWork(); //Function to find the best path
-	friend bool ComputeShortestPath(const TGraph& _graph, int _begin, int _end,
-			TPath& _path, double& _length);
+	friend bool ComputeShortestPath(const TGraph& , int, int, TPath& , double& );
 };
 
 
@@ -46,7 +46,7 @@ TGraph::TGraph(int d){
 	 */
 	this->dim = d;
 	int s = this->dim; //Set Size
-	delete[] ppDest;
+	//delete[] ppDest;
 	ppDest = 0;
 	if (s!=0){
 				ppDest = new TDest[s];
@@ -73,22 +73,21 @@ int TGraph::Dim() const{
 //---------------------------------------------------------------------------
 // TODO definitions for TPath
 
-TPath::TPath(){
-	//TPath constructor can initialize the pNode array with lenghtMax
-	cout << "Initialisation de TPath avec une longueur : " << this->LengthMax() << endl;
-	this->pNodes = new int[this->LengthMax()];
+TPath::TPath() {
+	this->lengthMax = 0;
+	this->length = 0;
+	this->pNodes = NULL;
+	
 	}
 
 TPath::TPath(int _lengthMax){
-	
-
-	this->pNodes = new int[this->LengthMax()];
-	//
+	cout << endl << "Creation d'un chemin : " << _lengthMax << endl;//Debug
+	//this->pNodes = new int[lengthMax];
+	//creation d'un pNodes
 	cout << endl<<"Longueur Max en entrée : "<< _lengthMax << endl;//Debug
 	this->lengthMax = _lengthMax;
 	this->length = 0;
 	this->pNodes = NULL;
-	
 }
 
 
@@ -126,8 +125,6 @@ TPath& TPath::operator=(const TPath& _path)
 			}
 		}
 		return *this;
-
-	
 }
 
 int TPath::LengthMax() const
@@ -153,8 +150,9 @@ void TPath::Erase(){
 bool TPath::Add(int _s){
 	//Function to add value to a PNode
 	
-	if (this->length < this->lengthMax){
+	if (this->length <= this->lengthMax){
 		this->pNodes[length] = _s;
+		this->lengthMax++;
 		this->length++;
 		return true; 
 	}
@@ -188,55 +186,161 @@ const int& TPath::operator[](int _i) const
 //---------------------------------------------------------------------------
 // TODO definitions for TWork
 
-	//Constructor for t
-	TWork::TWork(const TGraph& _graph, int _begin, int _end, TPath& _path, double& _length) : graph(_graph){
+	
+TWork::TWork(const TGraph& _graph, int _begin, int _end, TPath& _path, double& _length)
+	:graph(_graph), path(_path), lenght(&_length) {
+	// begin & end init
+	this->begin = _begin;
+	this->end = _end;
 
-		this->path = _path;
-		this->begin = _begin;
-		this->end = _end;
-		*lenght = INFINITY;
-		this->lenght = &_length;
-		
-		//Temp TWORK
-		this->tmpLenght = 0; // We set the cursor to 0 for the temp
-		this->tmpPath =  TPath(_graph.Dim()); // With the same dimension a the original TGraph
-		this->tmpPath.Add(_begin); // And we add the first element
-	}
+	//Pour le DoWork
+}
 
-	TWork::~TWork(){
+/*
+
+TWork::TWork(const TGraph& _graph, int _begin, int _end, TPath& _path, double& _length) :graph(_graph), path(_path), lenght(&_length),tmpLenght(0)
+{
+	//TWORK will set All values together
+	cout << "Creation ork" << endl;
+	//Initialize the graph, begin and end nodes, path and length
+	//If begin or end are not valid nodes, path must be empty and length must be set to INFINITY
+	//If begin or end are not valid nodes, return false
+	//If begin equals end, path must contain only begin and length must be set to 0
+	//this->graph = _graph;
+	this->begin = _begin;
+	this->end = _end;
+	//this->path = _path;
+	//*this->lenght = INFINIT;
+
+	//tmpPath = TPath(_graph.Dim());
+	//tmpPath.Add(begin);
+
+
+}
+*/
+TWork::~TWork(){
 		this->path.Erase();
 	}
 
-	void TWork::DoWork(){
-		//DFS function to find the bestlenght from start to end
-		//Let's creat an array of size dim to store first nodes connected to current TDest/node
-		//We can use the *PNode in TPath (which is a pointer to an array -- I guess)
-		//int* connected_Nodes = new int[this->graph.Dim()];
+
+	void TWork::DoWork()
+	{
+		cout << "DoWork stuff" << endl;
+		//Get 
+
+		// function to walk in the graph, find the shortest length between begin and end and set it to bestlength variable
+		/*
+		if (begin == end) {
+			this->bestLength = 0;
+			this->lenght = 0;
+		}
+		*/
+
 		
-		cout << "Starting DoWork " << endl; 
-		cout << "temp Graph max" << tmpPath.LengthMax() << endl;
-		cout << "temp Graph " << tmpPath.Length() << endl;
+
+		//Analyse the shortest path and set this in path variable
+		this->bestLength = INFINITY;
+		int index = 0;
+		//vector<int> visited;
+		bool continueProcedure = true;
+		while (continueProcedure)
+		{
+			
+			for (auto j = 0; j < this->graph.Dim(); j++) {
+				cout << "[" << index <<" , " << j << "]" <<" = "<< this->graph[index][j] << endl;
+				//cout << "Index: " << index << " j : " << j << endl;
+				if (this->graph[index][j] != INFINITY && index != j) {
+					if (this->graph[index][j] <= this->bestLength) {
+						//cout << "Nouveau lien  " << index << " de " <<graph[index][j]<< endl;
+						this->bestLength = this->graph[index][j];
+						*this->lenght += this->graph[index][j];
+						//lenght += this->graph[index][j];
+						path.Add(index);
+						if (index == end && j == end) {
+							continueProcedure = false;
+						}
+						index = j;
+						j = 0;
+					
+					}
+					else if(index == end && j == end){
+						continueProcedure = false;
+					}
+				}else if (index == end && j == end) {
+					continueProcedure = false;
+				}
+			}
+		}
+
+
+		cout << "==========================  DoWork result ======================================" << endl;
+		cout << "graph dimension: " << graph.Dim() << endl;
+		cout << "begin : " << begin << endl;
+		cout << "end : " << end << endl;
+		cout << "path : " << path.Length() << " And max : " << path.LengthMax() << endl;
+		cout << "length : " << this->lenght << endl;
+		cout << "length : " << lenght << endl;
+		cout << "Best_length : " << this->bestLength << endl;
 		
-		//buggggg
 		
 	}
 
 
 //---------------------------------------------------------------------------
 bool ComputeShortestPath(const TGraph& _graph, int _begin, int _end, TPath& _path, double& _length) {
-	if (_begin >= _graph.Dim() || _end >= _graph.Dim() || _path.LengthMax() < _graph.Dim()){
+
+	cout << "ComputeShortestPath has ......................................." << endl;
+	cout << "graph dimension: " << _graph.Dim() << endl;
+	cout << "begin : " << _begin << endl;
+	cout << "end : " << _end << endl;
+	cout << "path : " << _path.Length() <<" And max : "<<_path.LengthMax() << endl;
+	cout << "length : " << _length << endl;
+	// TODO
+	//Compute the shortest path from _begin to _end in _graph
+	//return false if no path exists, true otherwise
+	//The result path and length are returned in _path and _length
+	//_path is a sequence of nodes from _begin to _end
+	//_length is the sum of the values of the edges along _path
+	//_path and _length must be set to the shortest path found
+	//If several paths have the same length, any of them can be returned
+	//If no path exists, _path must be empty and _length must be set to INFINITY
+	//If _begin equals _end, _path must contain only _begin and _length must be set to 0
+	//The function must return false if no path exists, true otherwise
+	//The function must not change _graph
+	//The function must return immediately if _begin or _end are out of range
+	//The function must not change _path or _length if no path exists
+	//The function must not change _path or _length if _begin or _end are out of range
+	//The function must not change _path or _length if _begin equals _end
+	//The function must not change _path or _length if no path exists
+	//The function must not change _path or _length if _begin or _end are out of range
+	//The function must not change _path or _length if _begin equals _end
+	//_length = INFINITY;
+	//If _begin or _end are out of range
+	if (_begin < 0 || _end < 0 || _begin > _graph.Dim() || _end > _graph.Dim()) {
+		_length = INFINITY;
 		return false;
 	}
-				
-	
-	TWork t(_graph, _begin, _end, _path, _length);
-	cout << endl << "Execution de t.Dowwork() " << endl; //Debug
-	t.DoWork();
-	_length = t.bestLength;
-	if (_length < INFINITY)
+	//If _begin equals _end
+	if (_begin == _end) {
+		_path.Erase();
+		_path.Add(_begin);
+		_length = 0;
+		
 		return true;
-	else
+	}
+	//If no path exists
+	if (_graph[_begin][_end] == INFINITY) {
+		_length = INFINITY;
 		return false;
+	}
+
+	//Else we have some paths to get
+	//We create a TWork
+	TWork work(_graph, _begin, _end, _path, _length);
+	//We call the DoWork function
+	work.DoWork();
+
+	return true;
 }
 //---------------------------------------------------------------------------
 

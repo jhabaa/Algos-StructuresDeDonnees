@@ -1,0 +1,441 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6386",
+          "message": {
+            "text": "Buffer overrun while writing to 'pNodes'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                },
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 4,
+                  "endLine": 103,
+                  "endColumn": 30
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TPath::{ctor}",
+                  "decoratedName": "??0TPath@@QEAA@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 99,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 100,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 101,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 102,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 102,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this loop, (assume 'i<length')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 103,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 102,
+                            "startColumn": 33
+                          }
+                        },
+                        "message": {
+                          "text": "'i' may equal 1"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 102,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Continue this loop, (assume 'i<length')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 103,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "Invalid write to 'pNodes[1]', (writable range is 0 to 0)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6386",
+          "message": {
+            "text": "Buffer overrun while writing to 'pNodes'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                },
+                "region": {
+                  "startLine": 125,
+                  "startColumn": 5,
+                  "endLine": 125,
+                  "endColumn": 31
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TPath::=",
+                  "decoratedName": "??4TPath@@QEAAAEAV0@AEBV0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 120,
+                            "startColumn": 12
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this branch, (assume 'this!=&_path')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 121,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 122,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 123,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 124,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 124,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "Enter this loop, (assume 'i<length')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 125,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 124,
+                            "startColumn": 34
+                          }
+                        },
+                        "message": {
+                          "text": "'i' may equal 1"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 124,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "Continue this loop, (assume 'i<length')"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+                          },
+                          "region": {
+                            "startLine": 125,
+                            "startColumn": 15
+                          }
+                        },
+                        "message": {
+                          "text": "Invalid write to 'pNodes[1]', (writable range is 0 to 0)"
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31935.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Projets/Algos&StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "f0ef80bd9395223cc992712b3755b9634790c881c815ad534389a08f453b5922"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/projets/algos&structuresdedonnees/5in0301/exercices/graph/src/graph.h"
+          },
+          "hashes": {
+            "sha-256": "5b6ff77cef8a5cc34593d1d06b50a5607562a9c09805981c74b6108277e606bc"
+          }
+        }
+      ]
+    }
+  ]
+}

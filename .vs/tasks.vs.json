@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-graph",
+      "appliesTo": "5IN0301/exercices/Graph/src/graph.cpp",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-Algos&StructuresDeDonnees",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}
