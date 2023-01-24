@@ -1,0 +1,11 @@
+-IC:\mingw-w64\i686-12.2.0-release-posix-dwarf-rt_v10-rev0\mingw32\lib\gcc\i686-w64-mingw32\12.2.0\include\c++
+-IC:\mingw-w64\i686-12.2.0-release-posix-dwarf-rt_v10-rev0\mingw32\lib\gcc\i686-w64-mingw32\12.2.0\include\c++\i686-w64-mingw32
+-IC:\mingw-w64\i686-12.2.0-release-posix-dwarf-rt_v10-rev0\mingw32\lib\gcc\i686-w64-mingw32\12.2.0\include\c++\backward
+-IC:\mingw-w64\i686-12.2.0-release-posix-dwarf-rt_v10-rev0\mingw32\lib\gcc\i686-w64-mingw32\12.2.0\include
+-IC:\mingw-w64\i686-12.2.0-release-posix-dwarf-rt_v10-rev0\mingw32\lib\gcc\i686-w64-mingw32\12.2.0\include-fixed
+-IC:\mingw-w64\i686-12.2.0-release-posix-dwarf-rt_v10-rev0\mingw32\i686-w64-mingw32\include
+-ID:\users\jean\Documents\Ann_2223\isib\cpp\5IN0301\syllabus\SelectionSortDemo
+-ID:\users\jean\Documents\Ann_2223\isib\cpp\5IN0301\syllabus\InOut\src
+-std=c++17
+-target
+i686-w64-mingw32

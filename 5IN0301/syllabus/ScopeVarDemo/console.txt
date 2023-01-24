@@ -1,0 +1,8 @@
+main() --> j = 0 , global_i 0 , auto_i , 0
+fct()  --> global_i = 0 , auto_i = 0 , static_i = 0
+main() --> j = 1 , global_i 2 , auto_i , 1
+fct()  --> global_i = 2 , auto_i = 0 , static_i = 1
+main() --> j = 2 , global_i 4 , auto_i , 2
+fct()  --> global_i = 4 , auto_i = 0 , static_i = 2
+
+Press any key to continue.

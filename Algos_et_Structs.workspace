@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Algos_et_Structs" Database="" Version="10000">
+  <Project Name="InOut" Path="5IN0301/syllabus/InOut/InOut.project" Active="No"/>
+  <Project Name="Erathostenes" Path="5IN0301/exercices/Erathostenes/Erathostenes.project" Active="No"/>
+  <Project Name="ErathostenesSucc3" Path="Eratho2/5IN0301-2/exercices/ErathostenesSucc3/ErathostenesSucc3.project" Active="No"/>
+  <Project Name="Graph" Path="5IN0301/exercices/Graph/Graph.project" Active="Yes"/>
+  <Project Name="SacADosDemo" Path="5IN0301/syllabus/SacADosDemo/SacADosDemo.project" Active="No"/>
+  <Project Name="PolyDemo" Path="5IN0301/syllabus/PolyDemo/PolyDemo.project" Active="No"/>
+  <Project Name="MatrixDemo" Path="5IN0301/syllabus/MatrixDemo/MatrixDemo.project" Active="No"/>
+  <Project Name="ComplexDemo" Path="5IN0301/syllabus/ComplexDemo/ComplexDemo.project" Active="No"/>
+  <Project Name="GraphCycle" Path="5IN0301/exercices/GraphCycle/GraphCycle.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug">
+      <Environment/>
+      <Project Name="InOut" ConfigName="Debug"/>
+      <Project Name="Erathostenes" ConfigName="Debug"/>
+      <Project Name="ErathostenesSucc3" ConfigName="Debug"/>
+      <Project Name="Graph" ConfigName="Debug"/>
+      <Project Name="SacADosDemo" ConfigName="Debug"/>
+      <Project Name="PolyDemo" ConfigName="Debug"/>
+      <Project Name="MatrixDemo" ConfigName="Debug"/>
+      <Project Name="ComplexDemo" ConfigName="Debug"/>
+      <Project Name="GraphCycle" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release">
+      <Environment/>
+      <Project Name="InOut" ConfigName="Release"/>
+      <Project Name="Erathostenes" ConfigName="Release"/>
+      <Project Name="ErathostenesSucc3" ConfigName="Release"/>
+      <Project Name="Graph" ConfigName="Release"/>
+      <Project Name="SacADosDemo" ConfigName="Release"/>
+      <Project Name="PolyDemo" ConfigName="Release"/>
+      <Project Name="MatrixDemo" ConfigName="Release"/>
+      <Project Name="ComplexDemo" ConfigName="Release"/>
+      <Project Name="GraphCycle" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

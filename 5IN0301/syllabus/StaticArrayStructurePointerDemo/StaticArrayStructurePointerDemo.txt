@@ -1,0 +1,1 @@
+./Release/src_StaticArrayStructurePointerDemo.cpp.o   

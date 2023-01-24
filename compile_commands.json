@@ -1,0 +1,13 @@
+[{
+  "file": "/Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/exercices/Erathostenes/src/Erathostenes.cpp",
+  "directory": "/Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/exercices/Erathostenes",
+  "command": "/usr/bin/g++ -c /Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/exercices/Erathostenes/src/Erathostenes.cpp -o /Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/exercices/Erathostenes/src/Erathostenes.cpp.o -target arm64-apple-darwin22.1.0 -I/usr/local/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -I./../../syllabus/InOut/src -I.  -std=c++17  -pedantic-errors  -Wall  -g  -O0"
+ }, {
+  "file": "/Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/syllabus/InOut/src/inout.h",
+  "directory": "/Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/syllabus/InOut",
+  "command": "/usr/bin/g++ -c /Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/syllabus/InOut/src/inout.h -o /Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/syllabus/InOut/src/inout.h.o -target arm64-apple-darwin22.1.0 -I/usr/local/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -I.  -std=c++17  -pedantic-errors  -Wall  -g  -O0"
+ }, {
+  "file": "/Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/syllabus/InOut/src/inout.cpp",
+  "directory": "/Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/syllabus/InOut",
+  "command": "/usr/bin/g++ -c /Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/syllabus/InOut/src/inout.cpp -o /Users/jean-hubert/Documents/M2/Algos_et_Structs/5IN0301/syllabus/InOut/src/inout.cpp.o -target arm64-apple-darwin22.1.0 -I/usr/local/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I/Library/Developer/CommandLineTools/usr/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -I.  -std=c++17  -pedantic-errors  -Wall  -g  -O0"
+ }]
