@@ -6,18 +6,18 @@
 ProjectName            :=Graph
 ConfigurationName      :=Debug
 WorkspaceConfiguration :=Debug
-WorkspacePath          :=D:/NovBack/Desktop/Algos_et_Structs
-ProjectPath            :=D:/NovBack/Desktop/Algos_et_Structs/5IN0301/exercices/Graph
+WorkspacePath          :=/Users/jean-hubert/Documents/GitHub/Algos-StructuresDeDonnees
+ProjectPath            :=/Users/jean-hubert/Documents/GitHub/Algos-StructuresDeDonnees/5IN0301/exercices/Graph
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=Hean
-Date                   :=24/01/2023
-CodeLitePath           :="C:/Program Files/CodeLite"
-LinkerName             :=C:/MinGW/bin/g++.exe
-SharedObjectLinkerName :=C:/MinGW/bin/g++.exe -shared -fPIC
+User                   :=Jean Hubert ABA'A
+Date                   :=25/01/2023
+CodeLitePath           :="/Users/jean-hubert/Library/Application Support/CodeLite"
+LinkerName             :=/usr/bin/g++
+SharedObjectLinkerName :=/usr/bin/g++ -dynamiclib -fPIC
 ObjectSuffix           :=.o
 DependSuffix           :=.o.d
 PreprocessSuffix       :=.i
@@ -36,9 +36,7 @@ ArchiveOutputSwitch    :=
 PreprocessOnlySwitch   :=-E
 ObjectsFileList        :="Graph.txt"
 PCHCompileFlags        :=
-MakeDirCommand         :=makedir
-RcCmpOptions           := 
-RcCompilerName         :=C:/MinGW/bin/windres.exe
+MakeDirCommand         :=mkdir -p
 LinkOptions            :=  
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)..\syllabus\MatrixDemo 
 IncludePCH             := 
@@ -51,19 +49,19 @@ LibPath                := $(LibraryPathSwitch).
 ## Common variables
 ## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overridden using an environment variable
 ##
-AR       := C:/MinGW/bin/ar.exe rcu
-CXX      := C:/MinGW/bin/g++.exe
-CC       := C:/MinGW/bin/gcc.exe
+AR       := /usr/bin/ar rcu
+CXX      := /usr/bin/g++
+CC       := /usr/bin/gcc
 CXXFLAGS := -std=c++17 -pedantic-errors -Wall -g -O0 $(Preprocessors)
 CFLAGS   := -std=c90 -pedantic-errors -Wall -g,-O0 $(Preprocessors)
 ASFLAGS  := 
-AS       := C:/MinGW/bin/as.exe
+AS       := /usr/bin/as
 
 
 ##
 ## User defined environment variables
 ##
-CodeLiteDir:=C:\Program Files\CodeLite
+CodeLiteDir:=/Applications/codelite.app/Contents/SharedSupport/
 Objects0=$(IntermediateDirectory)/src_GraphTest.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_graph.cpp$(ObjectSuffix) 
 
 
@@ -83,11 +81,11 @@ $(OutputFile): $(IntermediateDirectory)/.d $(Objects)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 MakeIntermediateDirs:
-	@$(MakeDirCommand) "./Debug"
+	@test -d ./Debug || $(MakeDirCommand) ./Debug
 
 
 $(IntermediateDirectory)/.d:
-	@$(MakeDirCommand) "./Debug"
+	@test -d ./Debug || $(MakeDirCommand) ./Debug
 
 PreBuild:
 
@@ -97,13 +95,13 @@ PreBuild:
 ##
 $(IntermediateDirectory)/src_GraphTest.cpp$(ObjectSuffix): src/GraphTest.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GraphTest.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GraphTest.cpp$(DependSuffix) -MM src/GraphTest.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/NovBack/Desktop/Algos_et_Structs/5IN0301/exercices/Graph/src/GraphTest.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GraphTest.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/jean-hubert/Documents/GitHub/Algos-StructuresDeDonnees/5IN0301/exercices/Graph/src/GraphTest.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GraphTest.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_GraphTest.cpp$(PreprocessSuffix): src/GraphTest.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GraphTest.cpp$(PreprocessSuffix) src/GraphTest.cpp
 
 $(IntermediateDirectory)/src_graph.cpp$(ObjectSuffix): src/graph.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_graph.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_graph.cpp$(DependSuffix) -MM src/graph.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/NovBack/Desktop/Algos_et_Structs/5IN0301/exercices/Graph/src/graph.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_graph.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/jean-hubert/Documents/GitHub/Algos-StructuresDeDonnees/5IN0301/exercices/Graph/src/graph.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_graph.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_graph.cpp$(PreprocessSuffix): src/graph.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_graph.cpp$(PreprocessSuffix) src/graph.cpp
 

@@ -188,11 +188,12 @@ const int& TPath::operator[](int _i) const
 
 	
 TWork::TWork(const TGraph& _graph, int _begin, int _end, TPath& _path, double& _length)
-	:graph(_graph), path(_path), lenght(&_length) {
+	:graph(_graph), path(0), lenght(&_length) {
 	// begin & end init
+	path = _path;
 	this->begin = _begin;
 	this->end = _end;
-
+	*this->lenght = 0;
 	//Pour le DoWork
 }
 
@@ -258,6 +259,7 @@ TWork::~TWork(){
 						path.Add(index);
 						if (index == end && j == end) {
 							continueProcedure = false;
+							break;
 						}
 						index = j;
 						j = 0;
@@ -265,9 +267,11 @@ TWork::~TWork(){
 					}
 					else if(index == end && j == end){
 						continueProcedure = false;
+						break;
 					}
 				}else if (index == end && j == end) {
 					continueProcedure = false;
+					break;
 				}
 			}
 		}
@@ -278,8 +282,8 @@ TWork::~TWork(){
 		cout << "begin : " << begin << endl;
 		cout << "end : " << end << endl;
 		cout << "path : " << path.Length() << " And max : " << path.LengthMax() << endl;
-		cout << "length : " << this->lenght << endl;
-		cout << "length : " << lenght << endl;
+		cout << "length : " << *this->lenght << endl;
+		cout << "length : " << &lenght << endl;
 		cout << "Best_length : " << this->bestLength << endl;
 		
 		
