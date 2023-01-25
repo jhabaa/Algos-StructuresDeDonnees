@@ -286,7 +286,11 @@ TWork::~TWork(){
 		cout << "length : " << &lenght << endl;
 		cout << "Best_length : " << this->bestLength << endl;
 		
-		
+		cout << "==========================  Path result ======================================" << endl;
+		for (int i = 0; i < path.Length(); i++)
+		{
+			cout << path[i] << endl;
+		}
 	}
 
 
